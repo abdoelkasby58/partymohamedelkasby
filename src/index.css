@@ -351,6 +351,19 @@ h2 {
   margin-top: 1rem;
   color: var(--sage);
 }
+.site-footer {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 1rem 1.4rem calc(2.5rem + env(safe-area-inset-bottom, 0px));
+}
+.site-footer p {
+  font-family: "Cormorant Garamond", serif;
+  font-style: italic;
+  font-size: 1.05rem;
+  letter-spacing: 0.06em;
+  color: var(--gold);
+}
 @media (min-width: 760px) {
   .cards {
     grid-template-columns: 1fr 1fr;

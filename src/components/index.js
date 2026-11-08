@@ -7,3 +7,4 @@ export {default as Location} from "./Location";
 export {default as Petals} from "./Petals";
 export {default as Welcome} from "./Welcome";
 export {default as WishForm} from "./WishForm";
+export {default as Footer} from "./Footer";

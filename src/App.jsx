@@ -8,6 +8,7 @@ import {
   WishForm,
   Cover,
   Petals,
+  Footer,
 } from "./components";
 
 export default function App() {
@@ -30,6 +31,7 @@ export default function App() {
           <Location />
           <Final />
           <WishForm />
+          <Footer/>
         </main>
       )}
       {!coverGone && (
