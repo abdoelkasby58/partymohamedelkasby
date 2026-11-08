@@ -22,7 +22,7 @@ export default function App() {
 
   return (
     <>
-      <Petals />
+      {/* <Petals /> */}
       {opened && (
         <main>
           <Welcome />

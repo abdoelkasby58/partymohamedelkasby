@@ -29,17 +29,17 @@ export default function Final() {
       <Branch
         style={{
           position: "absolute",
-          left: -10,
+          left: 15,
           bottom: 20,
           width: 90,
           height: 270,
-          transform: "rotate(8deg)",
+          transform: "rotate(5deg)",
         }}
       />
       <Branch
         style={{
           position: "absolute",
-          right: -10,
+          right: 15,
           bottom: 20,
           width: 90,
           height: 270,

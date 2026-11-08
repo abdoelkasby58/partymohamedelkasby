@@ -1,4 +1,3 @@
-export {default as Branch}from "./Branch";
 export {default as Countdown} from "./Countdown";
 export {default as Cover} from "./Cover";
 export {default as Events} from "./Events";

@@ -27,7 +27,6 @@ export default function WishForm() {
       setMsg({ type: "error", text: "من فضلك اكتب اسمك ورسالتك." });
       return;
     }
-    if (e.target._gotcha.value) return; // حقل مخفي: لو اتملى يبقى سبام
 
     setBusy(true);
     setMsg({ type: "", text: "جارٍ الإرسال…" });
@@ -82,15 +81,6 @@ export default function WishForm() {
         <p className="count" aria-hidden="true">
           {text.length} / {MAX}
         </p>
-
-        {/* حقل مخفي ضد السبام */}
-        <input
-          type="text"
-          name="_gotcha"
-          tabIndex={-1}
-          autoComplete="off"
-          className="hp"
-        />
 
         <div className="text-center">
           <button className="btn" type="submit" disabled={busy}>

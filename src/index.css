@@ -378,7 +378,7 @@ h2 {
 }
 @media (prefers-reduced-motion: reduce) {
   .fx {
-    display: none;
+    display: flex;
   }
   html {
     scroll-behavior: auto;
@@ -391,13 +391,7 @@ h2 {
   text-align: left;
   direction: ltr;
 }
-.hp {
-  position: absolute;
-  left: -9999px;
-  width: 1px;
-  height: 1px;
-  opacity: 0;
-}
+
 .wmsg.ok {
   color: var(--sage);
 }
