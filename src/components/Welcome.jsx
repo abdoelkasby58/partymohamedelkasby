@@ -8,7 +8,7 @@ export default function Welcome() {
     const ctx = gsap.context(() => {
       gsap.timeline({ delay: 0.5 })
         .from('.bism', { opacity: 0, y: 10, duration: 1 })
-        .from('#nm span', { opacity: 0, y: 30, filter: 'blur(8px)', duration: 1.4, stagger: 0.35, ease: 'power3.out', clearProps: 'filter' }, '-=.5')
+        .from('#nm span', { opacity: 0, y: 30, duration: 1.4, stagger: 0.35, ease: 'power3.out' }, '-=.5')
         .from('.en, #welcome .rule, #welcome .lead', { opacity: 0, duration: 1.2, stagger: 0.3 }, '-=.6')
     })
     return () => ctx.revert()
