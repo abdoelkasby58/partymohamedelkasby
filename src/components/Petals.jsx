@@ -1,8 +1,10 @@
+import React from "react";
 import { useEffect, useMemo, useRef } from "react";
 import gsap from "gsap";
 import { reduceMotion } from "../lib/motion";
 
-export default function Petals() {
+
+function Petals() {
   const root = useRef(null);
   const count = useMemo(
     () => (matchMedia("(max-width:700px)").matches ? 9 : 16),
@@ -29,33 +31,29 @@ export default function Petals() {
   useEffect(() => {
     if (reduceMotion) return;
     const ctx = gsap.context(() => {
-      gsap.utils
-        .toArray(".petal")
-        .forEach((p) =>
-          gsap.to(p, {
-            y: innerHeight + 60,
-            x: `+=${Math.random() * 160 - 80}`,
-            rotation: Math.random() * 360,
-            duration: 14 + Math.random() * 12,
-            delay: Math.random() * 14,
-            repeat: -1,
-            ease: "none",
-            startAt: { y: -30 },
-          }),
-        );
-      gsap.utils
-        .toArray(".dust")
-        .forEach((d) =>
-          gsap.to(d, {
-            y: -40,
-            opacity: 0.05,
-            duration: 5 + Math.random() * 5,
-            repeat: -1,
-            yoyo: true,
-            ease: "sine.inOut",
-            delay: Math.random() * 4,
-          }),
-        );
+      gsap.utils.toArray(".petal").forEach((p) =>
+        gsap.to(p, {
+          y: innerHeight + 60,
+          x: `+=${Math.random() * 160 - 80}`,
+          rotation: Math.random() * 360,
+          duration: 14 + Math.random() * 12,
+          delay: Math.random() * 14,
+          repeat: -1,
+          ease: "none",
+          startAt: { y: -30 },
+        }),
+      );
+      gsap.utils.toArray(".dust").forEach((d) =>
+        gsap.to(d, {
+          y: -40,
+          opacity: 0.05,
+          duration: 5 + Math.random() * 5,
+          repeat: -1,
+          yoyo: true,
+          ease: "sine.inOut",
+          delay: Math.random() * 4,
+        }),
+      );
     }, root);
     return () => ctx.revert();
   }, []);
@@ -79,3 +77,5 @@ export default function Petals() {
     </div>
   );
 }
+
+export default Petals;

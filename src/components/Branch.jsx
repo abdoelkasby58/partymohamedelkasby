@@ -1,5 +1,7 @@
 // Delicate floral branch, drawn once and reused. Style via className / style.
-export default function Branch({ className = '', style }) {
+import React from 'react'
+
+function Branch({ className = '', style }) {
   return (
     <svg className={`br ${className}`} style={style} viewBox="0 0 100 300" aria-hidden="true">
       <path d="M50 296C46 220 56 140 50 6" />
@@ -13,3 +15,5 @@ export default function Branch({ className = '', style }) {
     </svg>
   )
 }
+
+export default Branch

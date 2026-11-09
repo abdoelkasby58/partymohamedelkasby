@@ -1,9 +1,11 @@
+import React from "react";
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import Branch from "./Branch";
 import { reduceMotion } from "../lib/motion";
+import Petals from "./Petals";
 
-export default function Cover({ opened, onOpen, onGone }) {
+function Cover({ opened, onOpen, onGone }) {
   const root = useRef(null);
 
   useEffect(() => {
@@ -31,6 +33,7 @@ export default function Cover({ opened, onOpen, onGone }) {
 
   return (
     <div id="cover" ref={root}>
+      <Petals />
       <Branch
         style={{
           left: -14,
@@ -52,15 +55,17 @@ export default function Cover({ opened, onOpen, onGone }) {
       <div className="frame">
         {/* The original uploaded card, unchanged */}
         <img
-          src="/partymohamed.png"
+          src="/partymohamed.webp"
           width="900"
           height="1350"
           alt="بطاقة حفظ الموعد: بسمة ومحمد، 20 / 11 / 2026"
         />
       </div>
       <button className="btn cover-btn" type="button" onClick={onOpen}>
-        افتحوا دعوتنا ❤️
+        افتحوا دعوتنا <span className="heart-in-cover">♥</span>
       </button>
     </div>
   );
 }
+
+export default Cover;

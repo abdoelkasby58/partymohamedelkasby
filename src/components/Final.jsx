@@ -1,10 +1,12 @@
+import React from "react";
 import { useRef } from "react";
 import gsap from "gsap";
 import Branch from "./Branch";
 import useInView from "../lib/useInView";
 import { reduceMotion } from "../lib/motion";
 
-export default function Final() {
+
+function Final() {
   const ref = useRef(null);
   useInView(ref, () => {
     if (reduceMotion) return;
@@ -62,3 +64,5 @@ export default function Final() {
     </section>
   );
 }
+
+export default Final;

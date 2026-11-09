@@ -12,7 +12,9 @@ function loadWishes() {
   }
 }
 
-export default function WishForm() {
+import React from "react";
+
+function WishForm() {
   const [name, setName] = useState("");
   const [text, setText] = useState("");
   const [msg, setMsg] = useState({ type: "", text: "" });
@@ -110,3 +112,5 @@ export default function WishForm() {
     </section>
   );
 }
+
+export default WishForm;

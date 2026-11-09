@@ -1,6 +1,8 @@
 const MAP_URL = "https://maps.app.goo.gl/39FyDizZ9PHQAXNbA";
 
-export default function Location() {
+import React from "react";
+
+function Location() {
   return (
     <section id="loc">
       <h2>مكان الفرح</h2>
@@ -17,3 +19,5 @@ export default function Location() {
     </section>
   );
 }
+
+export default Location;

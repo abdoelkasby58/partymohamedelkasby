@@ -13,7 +13,9 @@ function left() {
   ];
 }
 
-export default function Countdown() {
+import React from "react";
+
+function Countdown() {
   const [v, setV] = useState(left);
   useEffect(() => {
     const id = setInterval(() => setV(left()), 1000);
@@ -38,3 +40,5 @@ export default function Countdown() {
     </section>
   );
 }
+
+export default Countdown;
