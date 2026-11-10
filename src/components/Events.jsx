@@ -1,8 +1,4 @@
-import React from "react";
 import { useRef } from "react";
-import gsap from "gsap";
-import useInView from "../lib/useInView";
-import { reduceMotion } from "../lib/motion";
 
 const EVENTS = [
   {
@@ -28,10 +24,7 @@ const EVENTS = [
 
 function EventCard({ ev }) {
   const ref = useRef(null);
-  useInView(ref, (el) => {
-    if (!reduceMotion)
-      gsap.from(el, { opacity: 0, y: 30, duration: 1.4, ease: "power2.out" });
-  });
+ 
   return (
     <article ref={ref} className={`card ${ev.variant}`}>
       <h3>{ev.title}</h3>

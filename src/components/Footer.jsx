@@ -4,7 +4,7 @@ function Footer() {
   return (
      <footer className="site-footer">
       <div className="rule" />
-      <p dir="ltr">Designed &amp; Developed by Abdo Elkasby</p>
+      <p dir="ltr">Designed &amp; Developed by Abdelrahiman Elqasby</p>
     </footer>
   )
 }

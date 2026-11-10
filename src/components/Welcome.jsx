@@ -16,11 +16,11 @@ function Welcome() {
           {
             opacity: 0,
             y: 30,
-            filter: "blur(8px)",
+          
             duration: 1.4,
             stagger: 0.35,
             ease: "power3.out",
-            clearProps: "filter",
+           
           },
           "-=.5",
         )

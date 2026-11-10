@@ -10,13 +10,7 @@ function Final() {
   const ref = useRef(null);
   useInView(ref, () => {
     if (reduceMotion) return;
-    gsap.from("#bg, #end .lead, #end .rule, #end .names", {
-      opacity: 0,
-      y: 14,
-      duration: 1.6,
-      stagger: 0.5,
-      ease: "power2.out",
-    });
+
     gsap.to("#ht", {
       scale: 1.25,
       duration: 1.1,
@@ -61,6 +55,7 @@ function Final() {
       <span className="heart" id="ht" aria-hidden="true">
         ❤
       </span>
+      
     </section>
   );
 }
